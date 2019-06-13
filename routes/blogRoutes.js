@@ -14,4 +14,25 @@ blogRouter.post('/', (req, res) => {
     })
 })
 
+blogRouter.get('/', (req, res) => {
+    Blog.find((err, allBlogs) => {
+        if(err) {
+            res.status(500)
+            return res.send(err)
+        }
+        return res.status(200).send(allBlogs)
+    })
+})
+
+blogRouter.get('/:_id', (req, res) => {
+    Blog.findOne({_id: req.params._id}, (err, foundBlog) => {
+        if(err) {
+            res.status(500)
+            return res.send(err)
+        }
+        return res.status(200).send(foundBlog)
+    })
+})
+
+
 module.exports = blogRouter
