@@ -1,0 +1,27 @@
+{
+  "name": "group-project",
+  "version": "1.0.0",
+  "description": "Description",
+  "main": "database.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cody-m-jenkins/vschool-group-project.git"
+  },
+  "keywords": [
+    "blog"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cody-m-jenkins/vschool-group-project/issues"
+  },
+  "homepage": "https://github.com/cody-m-jenkins/vschool-group-project#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.5.15"
+  }
+}
