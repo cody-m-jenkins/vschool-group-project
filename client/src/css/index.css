@@ -1,3 +1,6 @@
+body {
+    background: antiquewhite;
+}
 .navbar{
     display: flex;
     justify-content: flex-end;
