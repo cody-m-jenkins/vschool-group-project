@@ -1,9 +1,10 @@
 import React from "react"
+import { Link } from "react-router-dom"
 
 const BlogContainer = () => {
     return(
-        <div>
-
+        <div className="blogContainer">
+            
         </div>
     )
 }
