@@ -8,8 +8,6 @@ ReactDOM.render(
         <BlogProvider>
             <App />
         </BlogProvider> 
-    </BrowserRouter>
-    
+    </BrowserRouter>, document.getElementById('root')
 )
 
-document.getElementById("root")
