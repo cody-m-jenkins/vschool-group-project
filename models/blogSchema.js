@@ -16,6 +16,7 @@ const Blog = new Schema({
     },
     imgUrl: {
         type: String,
+        required: true
     }
 })
 
