@@ -1,15 +1,16 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import BrowserRouter from "react-router-dom"
+import { BrowserRouter } from "react-router-dom"
 import BlogProvider from "./BlogProvider"
+import App from "./App"
+import styles from "./styles.css"
 
 ReactDOM.render(
     <BrowserRouter>
-        <BlogProvider>
+        {/* <BlogProvider> */}
             <App />
-        </BlogProvider> 
-    </BrowserRouter>
-    
+        {/* </BlogProvider>  */}
+    </BrowserRouter>,
+    document.getElementById("root")
 )
 
-document.getElementById("root")
