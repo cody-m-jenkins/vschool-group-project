@@ -1,22 +1,19 @@
-import React from "react"
-import Home from "./Home"
-import BlogPost from "./BlogPost"
-import Footer from "./Footer";
-import Navbar from "./Navbar"
-import {Switch, Route} from "react-router-dom"
-
-
+import React from 'react'
+import Navbar from './Navbar'
+import { Switch, Route } from 'react-router-dom'
+import Blog from './Blog'
+import About from './About'
+import PostPage from './PostPage'
 
 const App = () => {
-    return(
-        <div>
+    return (
+        <div className='app-container'>
             <Navbar />
-                <Switch>
-                        <Route exact path= "/" component={Home} />
-                        <Route path= "/blogPost" component={BlogPost} />
-                        <Route path= "/footer" component={Footer} />
-                </Switch>
-            <Footer />
+            <Switch>
+                <Route exact path='/' component={Blog} />
+                <Route path='/about' component={About} />
+                <Route path='/postpage' component={PostPage} />
+            </Switch>
         </div>
     )
 }

@@ -1,10 +1,9 @@
 import React from "react"
-import { Link } from "react-router-dom"
-
+import '../css/about.css'
 
 const About = () => {
     return(
-        <div>
+        <div className='about-container'>
             <h1>About Me</h1>
         </div>
     )

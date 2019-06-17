@@ -1,0 +1,30 @@
+.blog-card-container {
+    box-sizing: border-box;
+    width: 90%;
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: flex-start; */
+    align-items: space-between;
+    background: lightcoral;
+}
+
+.post-image {
+    box-sizing: border-box;
+    width: 20%;
+    height: 100%;
+    display: flex;
+    border: 1px solid white;
+}
+
+.post-intro {
+    box-sizing: border-box;
+    display: flex;
+    width: 70%;
+    height: 100%;
+    border: 1px solid green;
+}
+
+.post-title {
+
+}
