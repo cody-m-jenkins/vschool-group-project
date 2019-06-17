@@ -4,18 +4,26 @@ const Schema = mongoose.Schema
 const Blog = new Schema({
     title: {
         type: String,
-        required: true
+        required: true,
+        default: "No title provided"
     },
     description: {
         type: String,
-        required: true
+        required: true,
+        default: "No description provided"
     },
     blogBody: {
         type: String,
-        required: true
     },
     imgUrl: {
         type: String,
+        trim: true
+    },
+    tags: {
+        type: String
+    },
+    date: {
+        type: Date
     }
 })
 
