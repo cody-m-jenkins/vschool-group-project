@@ -12,6 +12,11 @@ const Blog = new Schema({
         required: true,
         default: "No description provided"
     },
+    author: {
+        type: String,
+        required: true,
+        default: "Anonymous"
+    },
     blogBody: {
         type: String,
     },
