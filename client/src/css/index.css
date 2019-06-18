@@ -1,9 +1,0 @@
-body {
-    background: antiquewhite;
-}
-.navbar{
-    display: flex;
-    justify-content: flex-end;
-    height: 20pt;
-    background: black;
-}
