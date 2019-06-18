@@ -7,6 +7,12 @@
     align-items: center;
 }
 
+button {
+    background: tomato;
+    width: 20%;
+    height: 20%;
+}
+
 @media (min-width: 480px) and (max-width: 767px) {
     .post-page-container {
         background: lightslategray;
