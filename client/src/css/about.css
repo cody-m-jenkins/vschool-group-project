@@ -5,7 +5,45 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: blue;
+}
+
+.about-container h1 {
+    box-sizing: border-box;
+    border: 1px solid lightcoral;
+}
+
+.about-section {
+    box-sizing: border-box;
+    width: 100%;
+    max-height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid lightgreen;
+}
+
+.section-image {
+    box-sizing: border-box;
+    display: flex;
+    width: 30%;
+    height: 20%;
+    border: 1px solid tomato;
+    overflow: hidden;
+}
+
+.section-info {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding-left: 10%;
+    padding-right: 10%; */
+    background: lightblue;
+}
+
+.section-info p {
+    width: 80%;
 }
 
 @media (min-width: 480px) and (max-width: 767px) {
