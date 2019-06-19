@@ -1,6 +1,6 @@
 import React from 'react'
 import '../css/blog.css'
-// import FullBlog from './FullBlog';
+import FullBlog from './FullBlog';
 
 const Blog = () => {
     return (
@@ -23,7 +23,7 @@ const Blog = () => {
                 </div>
             </div>
 
-            {/* <FullBlog /> */}
+            <FullBlog />
         </div>
     )
 }
