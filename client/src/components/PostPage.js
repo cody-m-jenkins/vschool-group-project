@@ -6,7 +6,13 @@ class PostPage extends Component {
         constructor() {
             super()
             this.state={
-                blogTitle:''
+                title: '',
+                description: '',
+                author: '',
+                blogBody: '',
+                imgUrl: '',
+                tags: '',
+                date: ''
             }
         }
         
@@ -16,15 +22,15 @@ class PostPage extends Component {
 
         onSubmit = (e) => {
             e.preventDefault()
-            const {blogTitle} = this.state
+            const {title, description, author, blogBody, imgUrl, tags, date} = this.state
 
-            axios.post('/', {blogTitle}).then((result) => {
-                    console.log('the post worked')
+            axios.post('/blogs/', {title, description, author, blogBody, imgUrl, tags, date }).then((result) => {
+                    console.log("Posted successfully")
             })
         }
  
     render() {
-        const { blogTitle } = this.state
+        const { title, description, author, blogBody, imgUrl, tags, date } = this.state
         return (
             <div className='post-page-container'>
                 <form onSubmit={this.onSubmit}>
@@ -33,8 +39,8 @@ class PostPage extends Component {
                         <input 
                         className='input-title' 
                         required type='string' 
-                        name='blogTitle' 
-                        value={blogTitle} 
+                        name='title' 
+                        value={title} 
                         onChange={this.onChange}
                         placeholder='100 Characters' />
                     </div>
@@ -45,7 +51,9 @@ class PostPage extends Component {
                         rows='4' cols='50' 
                         className='input-description' 
                         required type='string' 
-                        name='blogDescription' 
+                        name='description'
+                        value={description}
+                        onChange={this.onChange}
                         placeholder='Post Description'></textarea>
                     </div>
 
@@ -54,7 +62,9 @@ class PostPage extends Component {
                         <input 
                         className='input-author' 
                         required type='string' 
-                        name='blogAuthor' 
+                        name='author' 
+                        value={author}
+                        onChange={this.onChange}
                         placeholder='Post Author' />
                     </div>
 
@@ -63,7 +73,9 @@ class PostPage extends Component {
                         <input 
                         className='input-blogDate' 
                         type='string' 
-                        name='blogDate' 
+                        name='date' 
+                        value={date}
+                        onChange={this.onChange}
                         placeholder='Date' />
                     </div>
                     
@@ -72,7 +84,9 @@ class PostPage extends Component {
                         <input 
                         className='input-blogTags' 
                         type='string' 
-                        name='blogTags' 
+                        name='tags' 
+                        value={tags}
+                        onChange={this.onChange}
                         placeholder='Tags' />
                     </div>
 
@@ -81,7 +95,9 @@ class PostPage extends Component {
                         <input 
                         className='input-blogImgUrl' 
                         type='string' 
-                        name='blogImgUrl' 
+                        name='imgUrl' 
+                        value={imgUrl}
+                        onChange={this.onChange}
                         placeholder='Image URL' />
                     </div>
 
@@ -92,6 +108,8 @@ class PostPage extends Component {
                         className='input-body' 
                         required type='string' 
                         name='blogBody'
+                        value={blogBody}
+                        onChange={this.onChange}
                         ></textarea>
                     </div>
                     <button type='submit'>Submit</button>
