@@ -20,6 +20,18 @@ class BlogProvider extends Component{
         })
     }
 
+    postNew = (post) => {
+        // axios.post().then(response => {
+            const {title, description, author, blogBody, imgUrl, tags, date} = post
+            axios.post('/blogs', {title, description, author, blogBody, imgUrl, tags, date })
+            .then((response) => {
+            this.setState(prevState => {
+                    return {posts:[response.data, ...prevState.posts ]}
+                }
+            )
+        })
+    }
+
     newPosts = () => {
         this.setState((prevState) => {
             return {
@@ -36,6 +48,7 @@ class BlogProvider extends Component{
         return(
             <Provider value = {{
                 ...this.state,
+                postNew: this.postNew
             }}>
             {this.props.children}
             </Provider>

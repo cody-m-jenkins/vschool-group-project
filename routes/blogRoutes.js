@@ -4,12 +4,16 @@ const Blog = require('../models/blogSchema.js')
 
 blogRouter.post('/', (req, res) => {
     const newBlog = new Blog(req.body)
-
+    
     newBlog.save((err, savedBlog) => {
+        console.log(err)
+        console.log(newBlog)
         if(err){
-            res.status(500)
-            return res.send(err)
+            console.log('working err')
+            return res.status(500).send(err)
         }
+
+        console.log('working real')
         return res.status(201).send(savedBlog)
     })
 })

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import axios from 'axios'
+// import axios from 'axios';
+import { withPosts } from './BlogProvider';
 import '../css/post-page.css'
 
 class PostPage extends Component {
@@ -22,12 +23,22 @@ class PostPage extends Component {
 
         onSubmit = (e) => {
             e.preventDefault()
-            const {title, description, author, blogBody, imgUrl, tags, date} = this.state
-
-            axios.post('/blogs/', {title, description, author, blogBody, imgUrl, tags, date }).then((result) => {
-                    console.log("Posted successfully")
+            // const {title, description, author, blogBody, imgUrl, tags, date} = this.state
+            this.props.postNew(this.state)
+            // axios.post('/blogs', {title, description, author, blogBody, imgUrl, tags, date }).then((result) => {
+            //         console.log("Posted successfully")
+            // })
+            this.setState({
+                title: '',
+                description: '',
+                author: '',
+                blogBody: '',
+                imgUrl: '',
+                tags: '',
+                date: '' 
             })
         }
+        
  
     render() {
         const { title, description, author, blogBody, imgUrl, tags, date } = this.state
@@ -74,7 +85,7 @@ class PostPage extends Component {
                         <label>Date:</label>
                         <input 
                         className='input-blogDate' 
-                        type='string' 
+                        type='date' 
                         name='date' 
                         value={date}
                         onChange={this.onChange}
@@ -123,4 +134,4 @@ class PostPage extends Component {
 }
 
 
-export default PostPage
+export default withPosts(PostPage)
