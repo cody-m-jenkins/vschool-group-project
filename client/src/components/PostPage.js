@@ -28,7 +28,7 @@ class PostPage extends Component {
 
                     <div className='input-container'>
                         <label>Desc:</label>
-                        <textarea rows='4' cols='50' className='input-description' required type='string' name='blogDescription' placeholder='Post Description'></textarea>
+                        <textarea rows='4' cols='50' className='input-description' required type='string' name='blogDescription' placeholder='Description'></textarea>
                     </div>
 
                     <div className='input-container'>
