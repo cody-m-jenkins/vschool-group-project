@@ -47,6 +47,7 @@ class PostPage extends Component {
 
                     <div className='input-container'>
                         <label>Desc:</label>
+
                         <textarea 
                         rows='4' cols='50' 
                         className='input-description' 
@@ -55,6 +56,7 @@ class PostPage extends Component {
                         value={description}
                         onChange={this.onChange}
                         placeholder='Post Description'></textarea>
+
                     </div>
 
                     <div className='input-container'>
