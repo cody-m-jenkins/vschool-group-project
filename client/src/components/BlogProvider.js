@@ -14,9 +14,9 @@ class BlogProvider extends Component{
 
     getPosts = () => {
         axios.get("/blogs").then((response) => {
-            console.log(response.data)
+            // console.log(response.data)
             this.setState({posts: response.data})
-            console.log(response.data)
+            // console.log(response.data)
         })
     }
 

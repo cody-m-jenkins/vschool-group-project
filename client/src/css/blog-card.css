@@ -1,9 +1,10 @@
 .blog-card-container {
+    margin-top: 20pt;
     box-sizing: border-box;
     width: 90%;
     height: 30%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     /* justify-content: flex-start; */
     align-items: space-between;
     background: lightcoral;

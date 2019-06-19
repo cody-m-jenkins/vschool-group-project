@@ -1,20 +1,21 @@
 import React from 'react'
 import '../css/blog-card.css'
 import { withPosts } from "./BlogProvider"
-import BlogDetail from "./BlogDetail"
 
 const BlogCard = (props) => {
     console.log(props)
-        const mappedPosts = props.posts.map((post, i) => <BlogDetail key = {i }/>)
-            return (
-                <div className='blog-card-container'>
-                    <div className='post-image'>
-            
-                    </div>
-                    <div className='post-intro'>
-                        <h3 className='post-title'>California Should Fall Off</h3>
-                    </div>
-                 </div>
+        let {title, description, author, blogBody, imgUrl, tags, date } = props.post
+        return(
+            <div className='blog-card-container'>
+                <h1>{title}</h1>
+                <h3>{description}</h3>
+                <h3>{blogBody}</h3>
+                <img src={imgUrl} alt="blog post"/>
+                <h5>{tags}</h5>
+                <h5>{date}</h5>
+                <h5>{author}</h5>
+                
+            </div>
    )
 }
 
