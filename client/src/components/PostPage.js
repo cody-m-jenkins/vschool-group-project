@@ -20,36 +20,45 @@ class PostPage extends Component {
     render() {
         return (
             <div className='post-page-container'>
-                <div className='post-page-container-title'>
-                    <h3>Title of your blog post (recommended 100 characters or less): </h3>
-                    <input className='post-page-input-title' required type='string' name='blogTitle'/>
-                </div>
-                <div className='post-page-container-description'>
-                    <h3>Description of the blog post (recommended 300 characters or less): </h3>
-                    <input className='post-page-input-description' required type='string' name='blogDescription'/>
-                </div>
-                <div className='post-page-container-author'>
-                    <h3>Names of the author(s) who have contributed to the blog post:</h3>
-                    <input className='post-page-input-author' required type='string' name='blogAuthor'/>
-                </div>
-                <div className='post-page-container-body'>
-                    <h3>The body of your blog post:</h3>
-                    <input className='post-page-input-body' required type='string' name='blogBody'/>
-                </div>
-                <div className='post-page-container-blogImgUrl'>
-                    <h3>URL of the thumbnail image for your post (optional):</h3>
-                    <input className='post-page-input-blogImgUrl' type='string' name='blogImgUrl'/>
-                </div>
-                <div className='post-page-container-blogTags'>
-                    <h3>Tags for your post (optional):</h3>
-                    <input className='post-page-input-blogTags' type='string' name='blogTags'/>
-                </div>
-                <div className='post-page-container-blogDate'>
-                    <h3>Date of the post:</h3>
-                    <input className='post-page-input-blogDate' type='string' name='blogDate'/>
-                </div>
-                {this.renderRedirect()}
-                <button className='blog-button' onClick={this.setRedirect}>To Blog</button>
+                <form>
+                    <div className='input-container'>
+                        <label>Post Title:</label>
+                        <input className='input-title' required type='string' name='blogTitle' placeholder='100 Characters' />
+                    </div>
+
+                    <div className='input-container'>
+                        <label>Desc:</label>
+                        <textarea rows='4' cols='50' className='input-description' required type='string' name='blogDescription' placeholder='Post Description'></textarea>
+                    </div>
+
+                    <div className='input-container'>
+                        <label>Author:</label>
+                        <input className='input-author' required type='string' name='blogAuthor' placeholder='Post Author' />
+                    </div>
+
+                    <div className='input-container'>
+                        <label>Date:</label>
+                        <input className='input-blogDate' type='string' name='blogDate' placeholder='Date' />
+                    </div>
+                    
+                    <div className='input-container'>
+                        <label>Tags:</label>
+                        <input className='input-blogTags' type='string' name='blogTags' placeholder='Tags' />
+                    </div>
+
+                    <div className='input-container'>
+                        <label>Image URL:</label>
+                        <input className='input-blogImgUrl' type='string' name='blogImgUrl' placeholder='Image URL' />
+                    </div>
+
+                    <div className='input-container'>
+                        <label>Body:</label>
+                        <textarea rows="4" cols="50" className='input-body' required type='string' name='blogBody'>Insert Post Body Here</textarea>
+                    </div>
+                    {this.renderRedirect()}
+                    <button className='blog-button' onClick={this.setRedirect}>To Blog</button>
+                </form>
+
             </div>
         )    
     }
