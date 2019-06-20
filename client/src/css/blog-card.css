@@ -1,31 +1,31 @@
 .blog-card-container {
-    margin-top: 20pt;
     box-sizing: border-box;
-    width: 90%;
-    height: 30%;
+    width: 80%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    /* justify-content: flex-start; */
-    align-items: space-between;
-    background: lightcoral;
+    margin-top: 20pt;
+    background: #6b93d6;
+    color: #f8f8f8;
 }
 
 .post-image {
     box-sizing: border-box;
-    width: 20%;
+    width: 100%;
     height: 100%;
-    display: flex;
-    border: 1px solid white;
+    border: 1px solid tomato;
+}
+
+.post-image img {
+    box-sizing: border-box;
+    width: 70%;
+    height: 20vh;
 }
 
 .post-intro {
-    box-sizing: border-box;
+    /* box-sizing: border-box;
     display: flex;
     width: 70%;
     height: 100%;
-    border: 1px solid green;
-}
-
-.post-title {
-
+    border: 1px solid green; */
 }

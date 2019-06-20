@@ -5,5 +5,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* background: antiquewhite; */
+}
+
+.full-blog-container h2 {
+    color: #f8f8f8;
 }
