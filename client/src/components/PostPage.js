@@ -63,7 +63,7 @@ class PostPage extends Component {
                                 <label>Date:</label>
                                 <input 
                                 className='input-blogDate' 
-                                type='string' 
+                                type='date' 
                                 name='date' 
                                 value={date}
                                 onChange={this.onChange}
