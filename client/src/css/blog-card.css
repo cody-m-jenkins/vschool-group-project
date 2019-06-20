@@ -13,7 +13,10 @@
     padding-right: 3vw;
     padding-bottom: 3vh;
     font-family: 'Roboto', sans-serif;
+}
 
+.blog-card-container h1, .blog-card-container h3, .blog-card-container h5 {
+    font-weight: 300;
 }
 
 .post-image {
