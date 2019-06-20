@@ -142,6 +142,7 @@ button {
 
     .left-inputs {
         align-items: flex-end;
+        padding-bottom: 0;
     }
 
     .left-inputs label {
@@ -163,6 +164,10 @@ button {
 
     .right-inputs input {
         width: 150pt;
+    }
+
+    .input-author {
+
     }
 }
 
