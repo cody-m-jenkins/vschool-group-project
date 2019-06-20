@@ -5,8 +5,15 @@
     display: flex;
     flex-direction: column;
     margin-top: 20pt;
-    background: #6b93d6;
-    color: #f8f8f8;
+    background: #EAEAEA;
+    color: black;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+
 }
 
 .post-image {
@@ -28,4 +35,9 @@
     width: 70%;
     height: 100%;
     border: 1px solid green; */
+}
+
+.header-info{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
 }
