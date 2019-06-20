@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import {Redirect } from 'react-router-dom'
 // import axios from 'axios';
 import { withPosts } from './BlogProvider';
 import '../css/post-page.css'
@@ -14,11 +13,10 @@ class PostPage extends Component {
                 blogBody: '',
                 imgUrl: '',
                 tags: '',
-                date: '',
-                
+                date: ''
             }
         }
-        
+
         onChange = (e) => {
             this.setState({ [e.target.name]: e.target.value})
         }
@@ -39,12 +37,12 @@ class PostPage extends Component {
                 tags: '',
                 date: '' 
             })
-            <Redirect to='/blog' />
         }
         
  
     render() {
         const { title, description, author, blogBody, imgUrl, tags, date } = this.state
+       
         return (
             <div className='post-page-container'>
                 <form onSubmit={this.onSubmit}>
@@ -140,6 +138,7 @@ class PostPage extends Component {
                     <button type='submit'>Submit</button>
                 </form>
             </div>
+        
         )    
     }
 }
