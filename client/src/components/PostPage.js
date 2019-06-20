@@ -50,12 +50,13 @@ class PostPage extends Component {
                             <div className='input-container'>
                                 <label>Title:</label>
                                 <input 
-                                className='input-title title' 
+                                className='input-title' 
                                 required type='string' 
                                 name='title' 
                                 value={title} 
                                 onChange={this.onChange}
-                                placeholder='100 Characters' />
+                                placeholder='(Limit: 100 Characters)'
+                                maxLength= '100' />
                             </div>
 
                             <div className='input-container'>
@@ -66,7 +67,7 @@ class PostPage extends Component {
                                 name='date' 
                                 value={date}
                                 onChange={this.onChange}
-                                placeholder='Date' />
+                                placeholder='MM/DD/YYYY' />
                             </div>
                         </div>
 
@@ -79,7 +80,7 @@ class PostPage extends Component {
                                 name='author' 
                                 value={author}
                                 onChange={this.onChange}
-                                placeholder='Post Author' />
+                                placeholder='Van Wiggles, Straussy' />
                             </div>
 
                             <div className='input-container'>
@@ -90,7 +91,7 @@ class PostPage extends Component {
                                 name='tags' 
                                 value={tags}
                                 onChange={this.onChange}
-                                placeholder='Tags' />
+                                placeholder='rock, climbing, asshat' />
                             </div>
                         </div>
                     </div>
@@ -106,7 +107,7 @@ class PostPage extends Component {
                             name='imgUrl' 
                             value={imgUrl}
                             onChange={this.onChange}
-                            placeholder='Image URL' />
+                            placeholder='http://www.domain.com/images/tissuebox.jpg' />
                         </div>
 
                         <div className='input-container'>
@@ -118,7 +119,7 @@ class PostPage extends Component {
                             name='description'
                             value={description}
                             onChange={this.onChange}
-                            placeholder='Post Description'>Enter Description Here</textarea>
+                            placeholder='Description'></textarea>
                         </div>
                         <div className='input-container'>
                             <label>Body:</label>
@@ -129,7 +130,8 @@ class PostPage extends Component {
                             name='blogBody'
                             value={blogBody}
                             onChange={this.onChange}
-                            >Enter Body Content Here</textarea>
+                            placeholder='Place the body of your blog post here.'
+                            ></textarea>
                         </div>
                     </div>
                     <button type='submit'>Submit</button>
@@ -138,6 +140,5 @@ class PostPage extends Component {
         )    
     }
 }
-
 
 export default withPosts(PostPage)
