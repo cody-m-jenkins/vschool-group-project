@@ -8,7 +8,6 @@ const FullBlog = props => {
         const mappedPosts = props.posts.map((post, i) => <BlogCard key = {i} post={post}/>)
         return (
             <div className='full-blog-container'>
-                <h2>Blog Entries:</h2>
                 { mappedPosts }
             </div>
         )
