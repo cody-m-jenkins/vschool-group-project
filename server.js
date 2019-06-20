@@ -1,9 +1,11 @@
 const express = require ('express')
 const app = express()
-const PORT = 6066
+const PORT = 8000
 const mongoose = require('mongoose')
+const path = require('path')
 
 app.use(express.json())
+app.use(express.static(path.join(__dirname, "client", "build")))
 
 mongoose.connect(
     'mongodb://localhost:27017/blog',
@@ -16,5 +18,8 @@ mongoose.connect(
     })
 
     app.use('/blogs', require('./routes/blogRoutes'))
+    app.get("*", (req, res) => {
+        res.sendFile(path.join(__dirname, "client", "build", "index.html"))
+    })
 
     app.listen(PORT, () => console.log(`Server is listening on port ${PORT}`))
