@@ -165,10 +165,6 @@ button {
     .right-inputs input {
         width: 150pt;
     }
-
-    .input-author {
-
-    }
 }
 
 @media (min-width: 1024px) and (max-width: 1280px) {
