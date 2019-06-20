@@ -8,7 +8,7 @@ const BlogCard = (props) => {
         return(
             <div className='blog-card-container'>
                 {/* <div width= "100pt" height="150pt" background={imgUrl}> */}
-                    <img src={imgUrl} alt="blog image" width='100%'/>
+                    <img src={imgUrl} alt="blog" width='100%'/>
                 {/* </div> */}
 
 
