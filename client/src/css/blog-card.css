@@ -29,15 +29,8 @@
     height: 20vh;
 }
 
-.post-intro {
-    /* box-sizing: border-box;
-    display: flex;
-    width: 70%;
-    height: 100%;
-    border: 1px solid green; */
-}
-
 .header-info{
     font-family: 'Roboto', sans-serif;
-    font-weight: 900;
+    font-weight: 400;
 }
+
