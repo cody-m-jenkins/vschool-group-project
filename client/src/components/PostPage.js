@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Redirect } from 'react-router-dom'
 // import axios from 'axios';
 import { withPosts } from './BlogProvider';
 import '../css/post-page.css'
@@ -13,7 +14,8 @@ class PostPage extends Component {
                 blogBody: '',
                 imgUrl: '',
                 tags: '',
-                date: ''
+                date: '',
+                
             }
         }
         
@@ -37,6 +39,7 @@ class PostPage extends Component {
                 tags: '',
                 date: '' 
             })
+            <Redirect to='/blog' />
         }
         
  
