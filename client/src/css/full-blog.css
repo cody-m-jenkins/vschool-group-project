@@ -1,3 +1,7 @@
+* {
+    margin: 0;
+}
+
 .full-blog-container {
     box-sizing: border-box;
     width: 100%;
