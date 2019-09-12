@@ -9,7 +9,7 @@ app.use(express.json())
 app.use(express.static(path.join(__dirname, "client", "build")))
 
 mongoose.connect(
-    process.env.mongolab-convex-90600 || 'mongodb://localhost:27017/blog',
+    process.env["mongolab-convex-90600"] || 'mongodb://localhost:27017/blog',
     {
         useNewUrlParser: true,
         useFindAndModify: false,
