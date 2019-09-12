@@ -11,7 +11,7 @@ const Blog = () => {
 
             <div className='header-info'>
                     <h1>eat-sleep-code-repeat</h1>
-                    <h6>I'm a coder, yo.</h6>
+                    <h6>We're coders, yo.</h6>
                     {/* <p>[Social Media Component]</p> */}
             </div>
             <FullBlog />
