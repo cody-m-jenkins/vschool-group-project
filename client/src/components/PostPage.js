@@ -16,7 +16,7 @@ class PostPage extends Component {
                 date: ''
             }
         }
-        
+
         onChange = (e) => {
             this.setState({ [e.target.name]: e.target.value})
         }
@@ -42,6 +42,7 @@ class PostPage extends Component {
  
     render() {
         const { title, description, author, blogBody, imgUrl, tags, date } = this.state
+       
         return (
             <div className='post-page-container'>
                 <form onSubmit={this.onSubmit}>
@@ -137,6 +138,7 @@ class PostPage extends Component {
                     <button type='submit'>Submit</button>
                 </form>
             </div>
+        
         )    
     }
 }
